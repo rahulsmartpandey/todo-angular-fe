@@ -1,0 +1,6 @@
+
+SECTION 3 : STEP 09: Udemy : Ranga : Java Fullstack with Angular and Spring
+
+how to use templateUrl and template inside component
+We are creating 1 div inside app.component.html and 1 div inside index.html and created a simple style inside app.component.css to show that this style will be effective on the specific component i.e AppComponent
+the scope of component of .component.css style specifies to that particular component
