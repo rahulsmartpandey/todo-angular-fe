@@ -1,6 +1,18 @@
 
-SECTION 3 : STEP 09: Udemy : Ranga : Java Fullstack with Angular and Spring
+SECTION 3 : STEP 10: Udemy : Ranga : Java Fullstack with Angular and Spring
 
-how to use templateUrl and template inside component
-We are creating 1 div inside app.component.html and 1 div inside index.html and created a simple style inside app.component.css to show that this style will be effective on the specific component i.e AppComponent
-the scope of component of .component.css style specifies to that particular component
+1) how to create a component using ng generate component component_name or ng g c component_name
+Example : ng g c welcome
+The above syntax will automatically create a component called WelcomeComponent
+As the component is created, in console we can see the log as there are 4 files created (welcome.component.html,.component.specs.ts,.component.ts, .component.css,  and 1 file updated (src/app/app.module.ts)
+
+Every Angular component (@Component) in a project has to be associated with Angular Module(@NgModule) inside declarations array.
+
+2) once the component is created or added to the project, we cannot roll it back, so it is very important to get the correct names for component.Sim
+
+3) Similarly like java, in Typescript if a class implements an interface, then we have to implement all the methods of that interface or need to make it abstract method.
+
+export class WelcomeComponent implements OnInit
+
+4) we have included WelcomeComponet inside AppComponent through app-welcome selector using it inside app.component.html (<app-welcome></app-welcome>)
+To show one component(WelcomeComponent) inside another component (AppComponent) then selector of the WelcomeComponent(app-welcome) needs to be used inside view [app.component.html (<app-welcome></app-welcome>)]
