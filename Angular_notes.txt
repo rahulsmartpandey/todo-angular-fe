@@ -1,0 +1,73 @@
+From Video : 
+
+SECTION 3 : STEP 06:
+npm (node package manager downloads and install javascript frameworks, example : npm install jquery)
+npm -v
+node -v
+npm install -g @angular/cli
+ng --version
+ng new Projectname
+ng serve 
+ng lint 
+
+Linting is a process which checks for coding standards and this standards are defined in tslint.json
+
+ng build - creates a dist folder and we can deploy it to production
+
+dist folder contains files(main.js, polyfill.js, vendor.js etc) which are sufficient to deploy a specific angular application to production.
+
+ng test - runs the unit test written for angular application, typically unit test for angular are written in a framework called Jasmine and we use karma to run this unit test
+
+Unit test for angular are defined in karma.config.js and unit test will be written as part of the project in files like .specs.ts
+
+Unit test tests individual components one at a time.
+
+ng e2e (end to end testing) - launch entire angular application
+In Angular end to end testing is written using protractor and Protractor uses selenium in background.
+Files(Protractor.conf.js and tsconfig.) required for end to end testing is present in e2e directory.
+
+All the angular commands are defined in angular.json file
+
+SECTION 3 : STEP 07:
+
+app directory : All the components and modules will be present inside.
+assets directory : it contains all the images (things which will be used in the project as it is).
+environments directory : All the configurations for each environment (dev,test,acceptance,production) are present here.
+
+browser understands javascript ,so all the source code written in typescript as part of the angular application, so this code needs to be converted and that specification is specified in tsconfig.json file
+
+To document anything about the project, we can mention it in README.md file.
+
+package.json specifies all the packages,frameworks as well as the tools,needed to run unit test,integration test and are required to run an angular application.
+
+All the packages(frameworks like @angular/forms, @angular/core, @angular/router, etc) or modules specified in package.json are downloaded by node package manager using npm install, then it downloads all the dependencies mentioned inside node_modules directory
+
+whenever we create an angular application using ng new application_name command then npm install is automatically executed, donot have to do it explicitly.
+
+gitignore file contains the folder names which should not be committed to version control (git) 
+
+polyfill.ts take cares of all the browser incompatibilities (diff version of javascript) (ensures all the codes which we write is compatible across all the browsers)
+
+index.html and main.ts bootstraps an angular application.
+
+style.css :  we specify styling globally ( styles which are used across the whole application)
+
+test.ts is the starting point for running unit tests, it is used when we run ng test
+
+SECTION 3 : STEP 08:
+
+selector specifies tag name for the component, it is required to make use of a particular component, example: <app-root></app-root>
+templateUrl specifies the location of the html view or the template for a specific component.
+styleUrls specifies the location of the css file or styling for a specific component
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+
+Data binding is all about taking some data from the component and binding it to the view.
+
+app.component.ts file or .ts file contains the  code(Written in typescripts) to handle the view actions
+
+SECTION 3 : STEP 09:
